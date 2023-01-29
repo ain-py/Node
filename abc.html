@@ -1,0 +1,16 @@
+<!-- include the standalone script and shim.  this uses the UNPKG CDN -->
+<script src="https://unpkg.com/xlsx/dist/shim.min.js"></script>
+<script src="https://unpkg.com/xlsx/dist/xlsx.full.min.js"></script>
+
+<!-- example table with id attribute -->
+<table id="tableau">
+  <tr><td>Sheet</td><td>JS</td></tr>
+  <tr><td>12345</td><td>67</td></tr>
+</table>
+
+<!-- this block should appear after the table HTML and the standalone script -->
+<script type="text/javascript">
+  var workbook = XLSX.readFile('./Book1.xlsx');
+    console.log(workbook);
+  /* DO SOMETHING WITH workbook HERE */
+</script>
